@@ -1,0 +1,99 @@
+@import "../../breakpoints";
+
+.footer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--card-backgound);
+  padding: 5rem 9.38rem;
+
+  @include for-desktop-down() {
+    flex-direction: column;
+    row-gap: 2.5rem;
+    padding: 3.12rem 9.38rem;
+  }
+
+  @include for-tablet-down() {
+    flex-direction: column;
+    padding: 5.17rem 0;
+    row-gap: 3.33rem;
+  }
+
+  .navbar {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    max-width: 32.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1.88rem;
+    letter-spacing: -0.02625rem;
+
+    @include for-desktop-down() {
+      position: relative;
+      row-gap: 2.5rem;
+    }
+
+    @include for-tablet-down() {
+      position: relative;
+      max-width: 100%;
+      width: 100%;
+      row-gap: 3.33rem;
+    }
+
+    div {
+      max-width: 27.5rem;
+      column-gap: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include for-tablet-down() {
+        flex-direction: column;
+        max-width: 100%;
+        width: 100%;
+        row-gap: 2rem;
+      }
+    }
+
+    .contacts {
+      display: flex;
+      row-gap: 1.88rem;
+      align-items: center;
+
+      @include for-tablet-down() {
+        flex-direction: column;
+        row-gap: 1.5rem;
+      }
+    }
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    column-gap: 0.85rem;
+
+    .icon {
+      width: 3.08488rem;
+      height: 2.5rem;
+    }
+
+    .name {
+      width: 4.86525rem;
+      height: 1.66669rem;
+    }
+  }
+
+  .docs {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+
+    @include for-tablet-down() {
+      row-gap: 1.33rem;
+    }
+  }
+}

@@ -1,0 +1,331 @@
+@import "breakpoints";
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 70rem;
+
+    @include for-desktop-down() {
+      max-width: 43.75rem;
+    }
+
+    @include for-tablet-down() {
+      max-width: 27.5rem;
+    }
+
+    .section {
+      width: 100%;
+      margin: 5rem 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      & > span {
+        margin-top: 1.88rem;
+      }
+    }
+
+    .welcome_section {
+      .buttons_image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include for-tablet-down() {
+          margin-top: 3.5rem;
+          flex-direction: column-reverse;
+        }
+
+        .buttons {
+          display: flex;
+          gap: 1.25rem;
+          margin: 2.8rem 0 5rem;
+
+          @include for-tablet-down() {
+            flex-direction: column;
+            margin: 3.5rem 0 0;
+            width: 100%;
+          }
+
+          button {
+            width: 17.5rem;
+
+            @include for-tablet-down() {
+              width: 100%;
+            }
+
+            &:last-child {
+              background: var(--white-color);
+            }
+          }
+        }
+      }
+
+      .image_wrapper {
+        border-radius: 0.9rem;
+        border: 0.0625rem solid var(--stokeees, rgba(255, 255, 255, 0.20));
+        background: linear-gradient(138deg, rgba(187, 186, 186, 0.50) 0%, rgba(255, 255, 255, 0.50) 100%);
+        box-shadow: 0 .3rem 10px 0 rgba(0, 0, 0, 0.15);
+        backdrop-filter: blur(2.25rem);
+        padding: 0.72rem 1.56rem 3rem;
+        width: 100%;
+
+        @include for-desktop-down() {
+          border-radius: 0.57706rem;
+          padding: 0.49rem 1rem 1.91rem;
+        }
+
+        @include for-tablet-down() {
+          padding: 0.3rem 0.62rem 1.23rem;
+          border-radius: 0.36269rem;
+          box-shadow: 0 1.8352px 3.9999px 0 rgba(0, 0, 0, 0.15);
+          backdrop-filter: blur(14.588486671447754px);
+        }
+
+        .rects {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 1.07rem;
+        }
+
+        .rect {
+          width: 1rem;
+          height: 1rem;
+          border-radius: 0.15113rem;
+          border: 0.729px solid #FFF;
+          background: linear-gradient(316deg, rgba(118, 118, 118, 0.80) 0%, rgba(215, 215, 215, 0.40) 98.01%);
+          backdrop-filter: blur(1.1rem);
+
+          @include for-tablet-down() {
+            width: 0.633rem;
+            height: 0.633rem;
+            border-radius: 0.06044rem;
+            border: 0.292px solid #FFF;
+          }
+        }
+
+        .group {
+          display: flex;
+          column-gap: .24rem;
+
+          @include for-tablet-down() {
+            column-gap: .1rem;
+          }
+        }
+
+        img {
+          width: 65.625rem;
+          height: 39.375rem;
+
+          @include for-desktop-down() {
+            width: 41.76144rem;
+            height: 25.05563rem;
+          }
+
+          @include for-tablet-down() {
+            width: 26.25rem;
+            height: 15.74919rem;
+          }
+        }
+      }
+    }
+
+    .cards_section {
+      width: 100%;
+
+      .cards {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 2.5rem;
+        margin: 5rem 0;
+
+        .row {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          column-gap: 2.5rem;
+          row-gap: 1.9rem;
+          max-width: 100%;
+
+          @include for-desktop-down() {
+            flex-direction: column;
+          }
+        }
+      }
+
+      .buttons {
+        display: flex;
+        column-gap: 1.25rem;
+
+        @include for-tablet-down() {
+          width: 100%;
+          flex-direction: column;
+          row-gap: 1.25rem;
+        }
+
+        button {
+          width: 17.5rem;
+
+          @include for-tablet-down() {
+            width: 100%;
+          }
+
+          &:last-child {
+            background: var(--white-color);
+          }
+        }
+      }
+    }
+
+    .carousel_section {
+      width: 100%;
+      position: relative;
+
+      span {
+        max-width: 44rem;
+      }
+    }
+
+    .connect_train_section {
+      .cards {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 2.5rem;
+        margin-top: 5rem;
+
+        .card {
+          background: var(--card-backgound);
+          padding: 2.5rem;
+          display: flex;
+          flex-direction: row-reverse;
+          column-gap: 7.5rem;
+          align-items: center;
+
+          @include for-desktop-down() {
+            flex-direction: column;
+            align-items: start;
+          }
+
+          @include for-tablet-down() {
+            padding: 1.5rem;
+          }
+
+          img {
+            width: 12.5rem;
+            height: 12.5rem;
+
+            @include for-desktop-down() {
+              width: 7rem;
+              height: 7rem;
+            }
+
+            @include for-tablet-down() {
+              width: 6.625rem;
+              height: 6.625rem;
+            }
+          }
+
+          .description {
+            display: flex;
+            flex-direction: column;
+            row-gap: 1.25rem;
+
+            span {
+              text-align: left;
+              min-width: 27.4375rem;
+              width: 100%;
+
+              @include for-tablet-down() {
+                min-width: 100%;
+              }
+            }
+          }
+        }
+
+        .two_cards {
+          height: 28.6875rem;
+          display: flex;
+          gap: 2.5rem;
+          width: 100%;
+
+          @include for-desktop-down() {
+            flex-direction: column;
+            height: auto;
+          }
+
+          .card {
+            flex-direction: column;
+            align-items: start;
+
+            @include for-tablet-down() {
+              max-width: 100%;
+            }
+
+            img {
+              width: 7rem;
+              height: 7rem;
+            }
+          }
+        }
+      }
+    }
+
+    .faq_section {
+      h2 {
+        margin-bottom: 5rem;
+      }
+    }
+
+    .form_section {
+      display: flex;
+      column-gap: 10.88rem;
+      width: 100%;
+      margin: 7.5rem 0;
+
+      .form {
+        @include for-desktop-down() {
+          align-items: center;
+
+          & > * {
+            max-width: 22rem;
+          }
+        }
+      }
+
+      @include for-desktop-down() {
+        flex-direction: column;
+        row-gap: 3.12rem;
+        margin: 3.75rem 0;
+      }
+
+      @include for-tablet-down() {
+        flex-direction: column;
+        row-gap: 5rem;
+        margin: 5rem 0;
+      }
+
+      .description {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.88rem;
+        width: 100%;
+        max-width: 29rem;
+        text-align: left;
+
+        @include for-desktop-down() {
+          max-width: 100%;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

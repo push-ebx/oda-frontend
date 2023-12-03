@@ -1,0 +1,126 @@
+@import '../../breakpoints';
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.card {
+  display: flex;
+  height: 31.25rem;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--card-backgound);
+
+  @include for-desktop-down() {
+    height: 17rem;
+  }
+
+  @include for-tablet-down() {
+    flex-direction: column !important;
+    height: auto !important;
+    row-gap: 2rem !important;
+    padding: 2rem 1.25rem !important;
+    align-items: flex-start !important;
+  }
+
+  img {
+    @include for-tablet-down() {
+      width: 100% !important;
+      height: auto !important;
+    }
+  }
+
+  .description {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.56rem;
+    max-width: 27rem;
+    justify-content: center;
+    text-align: left;
+
+    @include for-desktop-down() {
+      max-width: 20rem;
+    }
+
+    @include for-tablet-down() {
+      max-width: 100%;
+    }
+  }
+}
+
+.right-card {
+  padding: 0 0 0 3rem;
+
+  @include for-desktop-down() {
+    padding: 0 0 0 2.5rem;
+  }
+
+  img {
+    width: auto;
+    height: 100%;
+  }
+}
+
+.left-card {
+  flex-direction: row-reverse;
+  padding: 0 3rem 0 0;
+
+  @include for-desktop-down() {
+    padding: 0 1.9rem 0 0;
+  }
+
+  img {
+    width: auto;
+    height: 100%;
+  }
+}
+
+.centered-card {
+  padding: 0 3rem 0 3rem;
+  column-gap: 8rem;
+
+  @include for-desktop-down() {
+    padding: 0 2.5rem 0 2.5rem;
+    column-gap: 3.5rem;
+  }
+
+  img {
+    box-shadow: 0 32px 64px 0 rgba(0, 0, 0, 0.15);
+  }
+}
+
+.two-card {
+  flex-direction: column;
+  height: 100%;
+  padding: 3.1rem 2.5rem 3.4rem 2.5rem;
+  row-gap: 3rem;
+
+  @include for-desktop-down() {
+    width: 100%;
+    flex-direction: row;
+    max-height: 17rem;
+  }
+
+  @include for-tablet-down() {
+    max-height: 100%;
+    width: 100%;
+  }
+
+  img {
+    height: 23rem;
+    width: auto;
+
+    @include for-desktop-down() {
+      height: 14.5rem;
+    }
+
+    @include for-tablet-down() {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

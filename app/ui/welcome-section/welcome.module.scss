@@ -1,0 +1,22 @@
+.button {
+  cursor: pointer;
+  display: flex;
+  padding: 0.9375rem 1.875rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 0.625rem;
+  background: var(--yellow-color);
+  outline: none;
+  border: calc(1rem / 16) solid #FBBC0F;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.025rem;
+  transition: background .5s;
+  font-style: normal;
+  line-height: normal;
+
+  &:hover {
+    background: var(--yellow-color) !important;
+  }
+}

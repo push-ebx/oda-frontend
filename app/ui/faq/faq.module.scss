@@ -1,0 +1,60 @@
+@import "../../breakpoints";
+
+.faq {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+
+  .question_answer {
+    padding: 2.5rem;
+    text-align: left;
+    background: var(--card-backgound);
+    display: flex;
+    flex-direction: column;
+    transition: height .5s;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+
+    @include for-tablet-down() {
+      padding: 1.5rem;
+    }
+
+    .question {
+      display: flex;
+      justify-content: space-between;
+      column-gap: 3.5rem;
+      align-items: center;
+
+      span {
+        margin: 0;
+        //max-width: 55rem;
+      }
+
+      img {
+        width: 1.875rem;
+        height: 1.875rem;
+      }
+    }
+
+    .answer {
+      display: grid;
+      grid-template-rows: 0fr;
+      overflow: hidden;
+      transition: grid-template-rows 500ms, padding 500ms, opacity 250ms;
+      padding: 0;
+      white-space: pre-wrap;
+      opacity: 0;
+
+      span {
+        min-height: 0;
+        margin: 0;
+      }
+    }
+
+    .answer_opened {
+      grid-template-rows: 1fr;
+      padding-top: 1.88rem;
+      opacity: 1;
+    }
+  }
+}

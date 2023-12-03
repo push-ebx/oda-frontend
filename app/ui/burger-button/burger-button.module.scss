@@ -1,0 +1,14 @@
+@import "../../breakpoints";
+
+.burger {
+  display: none;
+  width: 3rem;
+  height: 0.8rem;
+  cursor: pointer;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+
+  @include for-desktop-down {
+    display: block;
+  }
+}
