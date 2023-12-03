@@ -1,5 +1,5 @@
 import { unstable_noStore as noStore } from 'next/cache';
-export const strapi_url = 'http://212.233.74.234'
+export const strapi_url = 'https://push-ebx.ru'
 
 export async function getCarouselCards() {
   noStore();
@@ -31,6 +31,7 @@ export async function getCarouselButtons() {
     return data.map(item => {
       const {text_button, icon_button} = item.attributes;
       const image_url = icon_button.data.attributes.url;
+      console.log(strapi_url + image_url);
       return { text_button, icon_button: strapi_url + image_url };
     });
   } catch (error){
