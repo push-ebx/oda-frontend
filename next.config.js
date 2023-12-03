@@ -4,7 +4,7 @@ module.exports = {
     remotePatterns: [
       {
         protocol: 'http',
-        hostname: 'localhost',
+        hostname: '**',
         pathname: '**',
       }
     ],

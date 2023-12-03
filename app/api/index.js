@@ -1,5 +1,5 @@
 import { unstable_noStore as noStore } from 'next/cache';
-export const strapi_url = 'http://localhost:1337'
+export const strapi_url = 'http://212.233.74.234'
 
 export async function getCarouselCards() {
   noStore();
