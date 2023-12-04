@@ -13,7 +13,7 @@ export const Form = ({className, onClose}) => {
   const [phone, setPhone] = useState('');
 
   const send = async () => {
-    if (!checked && !name.trim() && !phone.trim()) return;
+    if (!checked || !name.trim() || !phone.trim()) return;
     await sendApplication(name, phone);
     setPhone('');
     setName('');
