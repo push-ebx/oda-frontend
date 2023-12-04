@@ -21,8 +21,8 @@ export const Footer = async ({phone, email}) => {
           <a href="#faq"><span>Основные вопросы</span></a>
         </div>
         <div className={styles.contacts}>
-          <span>{phone}</span>
-          <span>{email}</span>
+          <span><a href={`tel:${phone}`}>{phone}</a></span>
+          <span><a href ={`mailto: ${email}`}>{email}</a></span>
         </div>
       </nav>
 
