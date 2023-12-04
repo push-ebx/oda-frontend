@@ -86,7 +86,7 @@ export async function getHomePageData() {
     const {presentation, footer_phone, footer_email} = data.attributes
     const presentation_url = strapi_url + presentation.data.attributes.url;
 
-    return {presentation_url, footer_phone, footer_email};
+    return {presentation_url, phone: footer_phone, email: footer_email};
   } catch (error){
     console.log("error", error.message)
     return {}

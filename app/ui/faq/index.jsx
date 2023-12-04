@@ -7,7 +7,7 @@ import Image from 'next/image'
 import plus from '@/public/svg/plus.svg';
 import {PopupButton} from "@/app/ui/popup-button";
 
-export const FAQ = ({faq}) => {
+export const FAQ = ({faq, phone, email}) => {
   const [currentOpened, setCurrentOpened] = useState(null);
 
   const handleClick = (i) => {
@@ -57,8 +57,8 @@ export const FAQ = ({faq}) => {
         <div className={clsx(styles.answer, currentOpened === 'connecting' && styles.answer_opened)}>
           <span className={'text_1'}>
             Свяжитесь с нами одним из удобных для вас способом: <br/><br/>
-            тел.: <a href="tel:+74994447708">+7 (499) 444-77-08<br/><br/></a>
-            e-mail: <a href = "mailto: odasmart@yandex.ru">odasmart@yandex.ru</a><br/><br/>
+            тел.: <a href={`tel:${phone}`}>{phone}</a><br/><br/>
+            e-mail: <a href ={`mailto: ${email}`}>{email}</a><br/><br/>
             <span><PopupButton is_span text={'Форма обратной связи'} /></span>
           </span>
         </div>
@@ -71,8 +71,8 @@ export const FAQ = ({faq}) => {
         <div className={clsx(styles.answer, currentOpened === 'functional' && styles.answer_opened)}>
           <span className={'text_1'}>
             Свяжитесь с нами одним из удобных для вас способом: <br/><br/>
-            тел.: <a href="tel:+74994447708">+7 (499) 444-77-08<br/><br/></a>
-            e-mail: <a href = "mailto: odasmart@yandex.ru">odasmart@yandex.ru</a><br/><br/>
+            тел.: <a href={`tel:${phone}`}>{phone}</a><br/><br/>
+            e-mail: <a href ={`mailto: ${email}`}>{email}</a><br/><br/>
             <span><PopupButton is_span text={'Форма обратной связи'} /></span>
           </span>
         </div>

@@ -4,10 +4,8 @@ import { company_name, logo } from '@/public/svg';
 import clsx from 'clsx';
 import {PopupButton} from "@/app/ui/popup-button";
 import {BurgerButton} from "@/app/ui/burger-button";
-import {getHomePageData} from "@/app/api";
-export const Header = async ({className}) => {
-  const {presentation_url=''} = await getHomePageData();
 
+export const Header = async ({className, presentation_url}) => {
   return (
     <header className={clsx(styles.header, className)}>
       <div className={styles.logo}>

@@ -15,12 +15,12 @@ export default async function Home() {
   const carousel_cards = await getCarouselCards();
   const carousel_buttons = await getCarouselButtons();
   const faq = await getFAQ();
-  const {presentation_url=''} = await getHomePageData();
+  const {presentation_url='', email='', phone=''} = await getHomePageData();
   const ux_cards = await getUxCards();
 
   return (
     <>
-      <Header />
+      <Header presentation_url={presentation_url}/>
       <main className={styles.main}>
         <div className={styles.container}>
           <section className={clsx(styles.welcome_section, styles.section)}>
@@ -134,7 +134,7 @@ export default async function Home() {
 
           <section id={'faq'} className={clsx(styles.faq_section, styles.section)}>
             <h2 className={'title_2'}>F.A.Q.</h2>
-            <FAQ faq={faq}/>
+            <FAQ faq={faq} phone={phone} email={email} />
           </section>
 
           <section className={styles.form_section}>
@@ -146,7 +146,7 @@ export default async function Home() {
           </section>
         </div>
       </main>
-      <Footer />
+      <Footer phone={phone} email={email} />
     </>
   )
 }

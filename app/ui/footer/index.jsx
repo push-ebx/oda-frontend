@@ -3,12 +3,9 @@ import Image from 'next/image';
 import logo from '@/public/svg/logo.svg';
 import company_name from '@/public/svg/company-name.svg';
 import clsx from 'clsx';
-import {getHomePageData} from "@/app/api";
 import Link from "next/link";
 
-export const Footer = async () => {
-  const {footer_email='', footer_phone=''} = await getHomePageData();
-
+export const Footer = async ({phone, email}) => {
   return (
     <footer className={styles.footer}>
       <div className={styles.logo}>
@@ -24,8 +21,8 @@ export const Footer = async () => {
           <a href="#faq"><span>Основные вопросы</span></a>
         </div>
         <div className={styles.contacts}>
-          <span>{footer_phone}</span>
-          <span>{footer_email}</span>
+          <span>{phone}</span>
+          <span>{email}</span>
         </div>
       </nav>
 
