@@ -4,6 +4,7 @@ import logo from '@/public/svg/logo.svg';
 import company_name from '@/public/svg/company-name.svg';
 import clsx from 'clsx';
 import {getHomePageData} from "@/app/api";
+import Link from "next/link";
 
 export const Footer = async () => {
   const {footer_email='', footer_phone=''} = await getHomePageData();
@@ -17,10 +18,10 @@ export const Footer = async () => {
 
       <nav className={clsx('text_2', styles.navbar)}>
         <div>
-          <span>Преимущества</span>
-          <span>Модули</span>
-          <span>Подключение</span>
-          <span>Основные вопросы</span>
+          <a href="#advantages"><span>Преимущества</span></a>
+          <a href="#modules"><span>Модули</span></a>
+          <a href="#connection"><span>Подключение</span></a>
+          <a href="#faq"><span>Основные вопросы</span></a>
         </div>
         <div className={styles.contacts}>
           <span>{footer_phone}</span>
@@ -29,8 +30,8 @@ export const Footer = async () => {
       </nav>
 
       <div className={styles.docs}>
-        <span className={'footer_1'}>Политика конфиденциальности</span>
-        <span className={'footer_1'}>Пользовательское соглашение</span>
+        <Link href={"/docs/privacy-policy"}><span className={'footer_1'}>Политика конфиденциальности</span></Link>
+        <Link href={"/docs/user-agreement"}><span className={'footer_1'}>Пользовательское соглашение</span></Link>
       </div>
     </footer>
   )
