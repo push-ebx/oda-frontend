@@ -15,6 +15,8 @@ export const Form = ({className, onClose}) => {
   const send = async () => {
     if (!checked && !name.trim() && !phone.trim()) return;
     await sendApplication(name, phone);
+    setPhone('');
+    setName('');
     onClose && onClose();
   }
 
