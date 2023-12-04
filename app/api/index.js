@@ -1,5 +1,5 @@
 import { unstable_noStore as noStore } from 'next/cache';
-export const strapi_url = 'http://localhost:1337'
+export const strapi_url = 'https://push-ebx.ru'
 
 export async function getCarouselCards() {
   noStore();
