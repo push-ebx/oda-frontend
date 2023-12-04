@@ -1,6 +1,12 @@
 @import "breakpoints";
 
 .main {
+  margin-top: 6.25rem;
+
+  @include for-desktop-down() {
+    margin-top: 5rem;
+  }
+
   display: flex;
   flex-direction: column;
   align-items: center;

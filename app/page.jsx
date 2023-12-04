@@ -10,12 +10,6 @@ import {PopupButton} from "@/app/ui/popup-button";
 import {Form} from "@/app/ui/form";
 import {UxCard} from "@/app/ui/ux-card";
 import {Footer, Header} from "@/app/ui";
-import {Inter} from "next/font/google";
-
-const inter = Inter({
-  subsets: ['latin'],
-  weight: ['400']
-})
 
 export default async function Home() {
   const carousel_cards = await getCarouselCards();
@@ -26,7 +20,7 @@ export default async function Home() {
 
   return (
     <>
-      <Header className={inter.className}/>
+      <Header />
       <main className={styles.main}>
         <div className={styles.container}>
           <section className={clsx(styles.welcome_section, styles.section)}>

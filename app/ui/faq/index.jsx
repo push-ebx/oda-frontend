@@ -5,6 +5,7 @@ import clsx from 'clsx';
 import {useState} from "react";
 import Image from 'next/image'
 import plus from '@/public/svg/plus.svg';
+import React from 'react';
 
 export const FAQ = ({faq}) => {
   const [currentOpened, setCurrentOpened] = useState(null);
@@ -23,8 +24,8 @@ export const FAQ = ({faq}) => {
       {
         faq?.length &&
         faq.map((item, i) => (
-          <div key={i} className={styles.question_answer} onClick={() => handleClick(i)}>
-            <div className={clsx(styles.question)}>
+          <div key={i} className={styles.question_answer}>
+            <div className={clsx(styles.question)} onClick={() => handleClick(i)}>
               <span className={'headline_1'}>{item.question}</span>
               <Image src={plus} alt={plus}/>
             </div>

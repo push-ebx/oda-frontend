@@ -8,7 +8,7 @@
   right: 0;
   bottom: 0;
   top: 0;
-  z-index: 99999;
+  z-index: 99;
   transform: translateX(24rem) translate3d(0, 0, 0);
   will-change: transform;
   transition: transform .5s ease-in-out;
@@ -52,7 +52,7 @@
   position: fixed;
   background: #000;
   inset: 0;
-  z-index: 99999;
+  z-index: 98;
   pointer-events: none;
   opacity: 0;
   transition: visibility 0s, opacity 0.5s linear;
