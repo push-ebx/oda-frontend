@@ -1,10 +1,12 @@
 import { unstable_noStore as noStore } from 'next/cache';
-export const strapi_url = 'https://push-ebx.ru'
+
+const strapi_url = process.env.strapi_url;
+const mail_url = process.env.mail_url;
 
 export async function getCarouselCards() {
   noStore();
   const query_url = strapi_url + '/api/carousel-cards?populate=*';
-
+  console.log(query_url)
   try {
     const response = await fetch(query_url)
     const {data} = await response.json();
@@ -96,14 +98,13 @@ export async function getHomePageData() {
 export async function sendApplication(name, phone) {
   noStore();
 
-  const mail_url = 'https://mail.push-ebx.online/send?';
   const query_url = strapi_url + '/api/home-page?fields[0]=email';
 
   try {
     const response = await fetch(query_url);
     const {data} = await response.json();
     const {email} = data.attributes;
-    await fetch(mail_url + `email=${email}&phone=${phone}&name=${name}`);
+    await fetch(mail_url + `?email=${email}&phone=${phone}&name=${name}`);
 
     return 'ok';
   } catch (error){
