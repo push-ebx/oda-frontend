@@ -1,4 +1,5 @@
 *Требуемая версия NodeJS 18.17.0*
+
 ```
 cd oda-frentend
 npm inatall
@@ -10,3 +11,5 @@ cd mail
 npm inatall
 pm2 start index.js
 ```
+
+В .env.local можно настроить порты на cms и mail-скрипт
